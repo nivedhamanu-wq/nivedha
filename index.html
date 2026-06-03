@@ -237,6 +237,17 @@
   }
   .exp-right .org { font-size: 14px; color: var(--text-muted); margin-bottom: 0.75rem; }
   .exp-right p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+  .exp-bullets {
+    list-style: none; margin: 0.5rem 0 0.75rem; padding: 0;
+  }
+  .exp-bullets li {
+    font-size: 14px; color: var(--text-muted); line-height: 1.7;
+    padding: 3px 0 3px 18px; position: relative;
+  }
+  .exp-bullets li::before {
+    content: '▸'; position: absolute; left: 0;
+    color: var(--teal); font-size: 12px; top: 5px;
+  }
   .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
   .exp-tag {
     font-size: 12px; padding: 3px 10px; border-radius: 100px;
@@ -487,10 +498,33 @@
 <section class="section" id="experience">
   <div class="section-label">Career</div>
   <h2>Work Experience</h2>
-  <p class="section-sub">Six years across global technology, finance and healthcare-adjacent organisations.</p>
+  <p class="section-sub">6+ years across global technology, finance, NHS-adjacent and regulated organisations.</p>
 
   <div class="exp-timeline">
 
+    <!-- JAMATH FOODS -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Jul 2025 – Present</div>
+        <span class="exp-company-logo logo-other">Admin</span>
+      </div>
+      <div class="exp-right">
+        <h3>Admin (Part-Time)</h3>
+        <div class="org">Jamath Foods / Chaiiwala · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Coordinated daily administrative and operational activities across 4+ restaurant branches, ensuring smooth workflow, on-time stock delivery and adherence to quality standards.</li>
+          <li>Processed and reconciled 250+ supplier invoices monthly, maintaining 100% data accuracy in Excel and improving payment efficiency by 15%.</li>
+          <li>Analysed weekly sales and cost data to support management decisions, identifying trends that reduced food waste and improved cost control by 10%.</li>
+          <li>Streamlined vendor communication and documentation processes, enhancing operational efficiency and enabling faster cross-team collaboration.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">Invoice Processing</span><span class="exp-tag">Excel</span>
+          <span class="exp-tag">Operations</span><span class="exp-tag">Data Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NBL INTERNATIONAL -->
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">Jun 2023 – Jun 2025</div>
@@ -499,46 +533,95 @@
       <div class="exp-right">
         <h3>Business Reporting Analyst</h3>
         <div class="org">NBL International · London, UK</div>
-        <p>Managed information flow across 25+ stakeholders and built interactive Excel Macro dashboards serving 2,500 student portals. Authored 20+ functional &amp; non-functional requirements into business documents and user stories. <span class="highlight-pill">↑35% data-driven decisions</span></p>
+        <ul class="exp-bullets">
+          <li>Managed consistent information flow across 25+ diverse stakeholders, achieving 90% risk mitigation through structured information management.</li>
+          <li>Championed delivery of interactive dashboards via Excel Macros, directly contributing to a 35% increase in data-driven decision-making across the UK organisation.</li>
+          <li>Directed workshops and presentations, updated 100+ stakeholders via PowerPoint, improving transparency by 40%.</li>
+          <li>Authored 20+ functional and non-functional requirements into business documents and user stories, ensuring clear communication and facilitating project execution.</li>
+          <li>Assessed and optimised KPIs using Macros across a database of 2,500 portals, reducing system errors by 15%.</li>
+          <li>Developed a new data visualisation tool to streamline monthly reporting, resulting in a 30% decrease in report preparation time.</li>
+          <li>Collaborated with cross-functional teams to gather client feedback, implementing service plan enhancements that increased client retention by 10%.</li>
+        </ul>
         <div class="exp-tags">
           <span class="exp-tag">Excel Macros</span><span class="exp-tag">Stakeholder Mgmt</span>
-          <span class="exp-tag">KPI Analysis</span><span class="exp-tag">SharePoint</span><span class="exp-tag">Business Analysis</span>
+          <span class="exp-tag">KPI Analysis</span><span class="exp-tag">SharePoint</span><span class="exp-tag">Business Analysis</span><span class="exp-tag">User Stories</span>
         </div>
       </div>
     </div>
 
+    <!-- TURNER & TOWNSEND -->
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">Aug 2024</div>
-        <span class="exp-company-logo logo-tt">T&T</span>
+        <span class="exp-company-logo logo-tt">T&amp;T</span>
       </div>
       <div class="exp-right">
         <h3>Business Analyst Placement</h3>
         <div class="org">Turner &amp; Townsend · London HQ</div>
-        <p>Supported contract compliance for infrastructure projects exceeding £3.5 billion at London HQ. Reviewed contract documentation for risk assessment and contributed to compliance audits.</p>
+        <ul class="exp-bullets">
+          <li>Assisted in managing contract compliance for infrastructure projects exceeding £3.5 billion, gaining hands-on experience in contract administration and compliance monitoring.</li>
+          <li>Reviewed contract documentation for risk assessment and adherence to procurement guidelines at the London HQ.</li>
+          <li>Contributed to completing compliance audits, ensuring all documentation met regulatory and procurement standards.</li>
+        </ul>
         <div class="exp-tags">
           <span class="exp-tag">Contract Compliance</span><span class="exp-tag">Risk Assessment</span>
-          <span class="exp-tag">Procurement</span><span class="exp-tag">Infrastructure</span>
+          <span class="exp-tag">Procurement</span><span class="exp-tag">Infrastructure</span><span class="exp-tag">Audit</span>
         </div>
       </div>
     </div>
 
+    <!-- RIGHT SUPPORT MANAGEMENT -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-date">Jun 2022 – May 2023</div>
+        <span class="exp-company-logo logo-other">RSM</span>
+      </div>
+      <div class="exp-right">
+        <h3>Administrator Assistant</h3>
+        <div class="org">Right Support Management Limited (CQC-Regulated) · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Processed 400+ monthly invoices and managed confidential financial records for 53 service users within a CQC-regulated care organisation, maintaining strict data confidentiality at all times.</li>
+          <li>Coordinated meetings, took minutes, maintained a bring-forward system for key deadlines and handled all incoming correspondence as the first point of contact for the office.</li>
+          <li>Documented financial transactions by entering rent receivables, payables and account information into journals and Quickfile financial management systems.</li>
+          <li>Maintained robust control of company properties with accurate data on mortgages, leases and purchase records; liaised with authorities regarding housing benefits and service charge claims.</li>
+          <li>Produced weekly receivable reports, assisted in outstanding debt follow-up and reduced outstanding debts by 20%.</li>
+          <li>Reconciled financial discrepancies by collecting and analysing account information, ensuring all journal entries were completed in general ledgers.</li>
+          <li>Maintained accounting controls by preparing and recommending policies and procedures; secured financial information via database backups.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">CQC Regulated</span><span class="exp-tag">Invoice Processing</span>
+          <span class="exp-tag">Confidential Records</span><span class="exp-tag">Quickfile</span><span class="exp-tag">Financial Reporting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXL SERVICE -->
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">May 2021 – Jan 2022</div>
         <span class="exp-company-logo logo-exl">EXL</span>
       </div>
       <div class="exp-right">
-        <h3>Business Analyst (Senior Executive)</h3>
+        <h3>Business Analyst · Senior Executive</h3>
         <div class="org">EXL Service · Bengaluru, India</div>
-        <p>Led cross-functional teams to 95% on-time project delivery using SAP, PeopleSoft &amp; Slack. Processed 3,000+ daily invoices and managed payroll for 10,000+ employees. Contributed to SOX &amp; EY audits with 99.5% accuracy. <span class="highlight-pill">↑49% KPI attainment</span></p>
+        <ul class="exp-bullets">
+          <li>Led cross-functional teams ensuring on-time project delivery, achieving a 95% project completion rate using SAP, PeopleSoft and Slack.</li>
+          <li>Managed processing of 3,000+ daily invoices and oversaw SAP Ariba, Coupa and Tungsten expenses for consultants; managed payroll for 10,000+ employees with 99.5% accuracy.</li>
+          <li>Contributed to monthly SOX and EY internal audit cycles, ensuring meticulous financial compliance across diverse geographic zones.</li>
+          <li>Maintained regular communication with finance operations teams and clients' Head of Finance, reporting on SLA performance and exceptions lists.</li>
+          <li>Collaborated with clients to identify regulatory and product requirements, providing guidance on process optimisation and data architecture.</li>
+          <li>Exceeded KPI targets by 49% through effective project initiation and management; optimised business processes by 90% through comprehensive support.</li>
+          <li>Led delivery of strategic initiatives and regulatory projects within cross-functional teams, establishing governance frameworks for key processes.</li>
+          <li>Spearheaded identification and capture of precise data requirements for compliant sustainability (ESG) reporting, increasing data accuracy by 30%.</li>
+        </ul>
         <div class="exp-tags">
-          <span class="exp-tag">SAP</span><span class="exp-tag">PeopleSoft</span><span class="exp-tag">Coupa</span>
-          <span class="exp-tag">SOX Audit</span><span class="exp-tag">GL Reconciliation</span>
+          <span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">PeopleSoft</span>
+          <span class="exp-tag">SOX Audit</span><span class="exp-tag">EY Audit</span><span class="exp-tag">ESG Reporting</span><span class="exp-tag">GL Reconciliation</span>
         </div>
       </div>
     </div>
 
+    <!-- ORACLE -->
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">Mar 2018 – May 2021</div>
@@ -547,11 +630,23 @@
       <div class="exp-right">
         <h3>Project Business Analyst</h3>
         <div class="org">Oracle · Bengaluru, India</div>
-        <p>Administered multicurrency EMEA portfolio of 100,000+ contracts in Oracle Cloud EBS/R12. Compiled Steering Group packs, managed governance documentation and delivered KPI reporting frameworks that cut compliance audit issues by 50%. Won 5× Year of Achievement Recognition (YAR). <span class="highlight-pill">95% on-time delivery</span></p>
+        <ul class="exp-bullets">
+          <li>Administered multicurrency EMEA portfolio of 100,000+ contracts in Oracle Cloud EBS/R12, ensuring accurate recording of project submissions, risks, financial crime and credit memos.</li>
+          <li>Played a key PMO role — scheduled and compiled Steering Group packs, managed meeting minutes, maintained version-controlled SharePoint governance sites, and distributed minutes within 24 hours.</li>
+          <li>Maintained a live Excel action log capturing owner, due date, status and dependencies, proactively flagging items approaching deadlines before slippage occurred.</li>
+          <li>Supported the Delivery Lead in project governance and administration; applied project tools and templates addressing feedback from the Oracle Portfolio Workstream.</li>
+          <li>Implemented project-level KPIs using Excel Macros, enhancing performance tracking by 25% and ensuring accurate evaluations across the EMEA region.</li>
+          <li>Prepared and updated Requirement Delivery Plans, monitored progress and communicated updates to managers and the department director, achieving a 95% on-time delivery rate.</li>
+          <li>Defined and implemented data governance practices compliant with PALA requirements, resulting in a 50% reduction in compliance audit issues.</li>
+          <li>Managed the technical development of annual ESG reporting, ensuring alignment with frameworks and enhancing report accuracy by 30%.</li>
+          <li>Delivered training to delivery leads and business stakeholders on project templates and approaches; guided Finance teams on lessons learned and best practices.</li>
+          <li>Generated invoices and revenues for Time &amp; Materials and Fixed Price projects; coordinated with AR, AP, General Ledger and Cash Applications teams to resolve issues in real time.</li>
+          <li>Won Year of Achievement Recognition (YAR) award 5 consecutive times for outstanding contribution to project and contract management excellence.</li>
+        </ul>
         <div class="exp-tags">
-          <span class="exp-tag">Oracle Cloud EBS</span><span class="exp-tag">PMO Support</span>
-          <span class="exp-tag">ESG Reporting</span><span class="exp-tag">Project Governance</span>
-          <span class="exp-tag">EMEA Portfolio</span>
+          <span class="exp-tag">Oracle Cloud EBS/R12</span><span class="exp-tag">PMO Support</span>
+          <span class="exp-tag">EMEA Portfolio</span><span class="exp-tag">Steering Group</span>
+          <span class="exp-tag">ESG Reporting</span><span class="exp-tag">Project Governance</span><span class="exp-tag">PALA Compliance</span>
         </div>
       </div>
     </div>
@@ -563,44 +658,68 @@
 <section class="section" id="projects" style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); max-width: 100%; padding: 5rem 2rem;">
 <div style="max-width: 1100px; margin: 0 auto;">
   <div class="section-label">Portfolio</div>
-  <h2>Key Projects</h2>
-  <p class="section-sub">Selected analytical and business projects demonstrating measurable impact.</p>
+  <h2>Key Projects &amp; Achievements</h2>
+  <p class="section-sub">Selected projects demonstrating measurable impact across technology, finance and healthcare.</p>
 
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-card-num">01</div>
       <h3>EMEA Contract Portfolio Governance</h3>
-      <p>End-to-end PMO support for 100,000+ Oracle EMEA contracts, including action logs, Steering Group packs and live SharePoint governance site. Coordinated across Finance, AR, AP and Cash Applications teams.</p>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>End-to-end PMO support for 100,000+ Oracle EMEA contracts across multicurrency projects.</li>
+        <li>Maintained live action logs, compiled Steering Group packs and managed version-controlled SharePoint governance site.</li>
+        <li>Coordinated across Finance, AR, AP and Cash Applications teams to resolve issues in real time.</li>
+      </ul>
       <div class="project-impact">📉 50% reduction in compliance audit issues</div>
     </div>
     <div class="project-card">
       <div class="project-card-num">02</div>
-      <h3>Excel Macro Dashboard Suite</h3>
-      <p>Designed and built a suite of Excel Macro dashboards serving 2,500 student portals at NBL International. Automated KPI tracking and monthly reporting, with real-time error flagging.</p>
+      <h3>Excel Macro Dashboard Suite — NBL</h3>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>Designed and built Excel Macro dashboards serving 2,500 student portals at NBL International.</li>
+        <li>Automated KPI tracking and monthly reporting with real-time error flagging for 25+ stakeholders.</li>
+        <li>Reviewed dashboards every morning; sent weekly risk summary to Director before issues escalated.</li>
+      </ul>
       <div class="project-impact">⏱ 30% reduction in monthly reporting time</div>
     </div>
     <div class="project-card">
       <div class="project-card-num">03</div>
-      <h3>ESG Data Compliance Programme</h3>
-      <p>Led data governance for sustainability reporting at EXL &amp; Oracle, capturing data requirements aligned to PALA framework and coordinating with ESG teams to ensure compliant output for global stakeholders.</p>
-      <div class="project-impact">📈 30% improvement in data accuracy</div>
+      <h3>ESG &amp; Sustainability Data Programme</h3>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>Led data governance for sustainability reporting at EXL &amp; Oracle, aligned to the PALA framework.</li>
+        <li>Worked with ESG teams to produce compliant reporting meeting stakeholder and regulatory expectations.</li>
+        <li>Led continuous improvement initiatives to reduce data discrepancies by 20%.</li>
+      </ul>
+      <div class="project-impact">📈 30% improvement in data accuracy · 25% compliance improvement</div>
     </div>
     <div class="project-card">
       <div class="project-card-num">04</div>
-      <h3>Cardtrend Digital Solution (MSc Project)</h3>
-      <p>Scoped a digital solution for Cardtrend, a regulated B2B payments company. Facilitated client discovery sessions, designed requirements and managed team delivery remotely during campus disruption.</p>
-      <div class="project-impact">🏆 Highlighted as exceptionally client-focused</div>
+      <h3>CQC-Regulated Care Administration</h3>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>Managed confidential records for 53 vulnerable service users at Right Support Management (CQC-regulated).</li>
+        <li>Processed 400+ invoices monthly; maintained bring-forward deadline system and all governance documentation.</li>
+        <li>Ensured full compliance with care sector regulatory frameworks and data protection requirements.</li>
+      </ul>
+      <div class="project-impact">🏥 20% reduction in outstanding debts · 100% CQC compliance</div>
     </div>
     <div class="project-card">
       <div class="project-card-num">05</div>
-      <h3>NHS Project Support Application</h3>
-      <p>Tailored application and supporting evidence for Lewisham &amp; Greenwich NHS Trust Project Support Officer role, demonstrating structured project admin, stakeholder engagement and data-driven decision making.</p>
-      <div class="project-impact">🏥 NHS Infrastructure Improvement Delivery</div>
+      <h3>Cardtrend Digital Solution (MSc Project)</h3>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>Scoped a digital solution for Cardtrend, a regulated B2B payments company, as part of MSc Collaborative Project.</li>
+        <li>Facilitated client discovery sessions, designed requirements and managed team delivery remotely during campus disruption.</li>
+        <li>Maintained stakeholder momentum and ensured all deliverables were met under pressure.</li>
+      </ul>
+      <div class="project-impact">🏆 Highlighted as exceptionally client-focused by assessors</div>
     </div>
     <div class="project-card">
       <div class="project-card-num">06</div>
-      <h3>Aston University — MSc Business Analytics</h3>
-      <p>Currently completing MSc Business Analytics at Aston University. Building machine learning models in Python, statistical analyses and decision models using linear programming. Developing Power BI &amp; Power Automate skills.</p>
+      <h3>MSc Business Analytics — Aston University</h3>
+      <ul class="exp-bullets" style="margin-bottom:1rem;">
+        <li>Building machine learning models in Python; conducting statistical analyses using regression and hypothesis testing.</li>
+        <li>Developing decision models using linear and integer programming; building Power BI and Power Automate dashboards.</li>
+        <li>Applying academic learning directly to real-world BA and PMO project scenarios.</li>
+      </ul>
       <div class="project-impact">🎓 Graduating 2026 · Merit Classification</div>
     </div>
   </div>
