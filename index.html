@@ -231,6 +231,22 @@
   .logo-tt { background: #f0fdf4; color: #15803d; }
   .logo-other { background: var(--cream); color: var(--text-muted); border: 1px solid var(--border); }
 
+  .exp-tab-row {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .exp-tab {
+    font-size: 14px; font-weight: 500; padding: 8px 20px;
+    border-radius: 100px; border: 1.5px solid var(--border);
+    background: transparent; color: var(--text-muted);
+    cursor: pointer; transition: all 0.2s;
+  }
+  .exp-tab:hover { border-color: var(--teal); color: var(--teal); }
+  .exp-tab.active {
+    background: var(--navy); color: white;
+    border-color: var(--navy);
+  }
+
   .exp-right h3 {
     font-size: 18px; font-weight: 500; color: var(--navy);
     margin-bottom: 4px;
@@ -500,158 +516,291 @@
   <h2>Work Experience</h2>
   <p class="section-sub">6+ years across global technology, finance, NHS-adjacent and regulated organisations.</p>
 
-  <div class="exp-timeline">
+  <!-- ROLE VIEW TABS -->
+  <div class="exp-tab-row">
+    <button class="exp-tab active" onclick="switchTab('precontract',this)">Pre-Contract Analyst</button>
+    <button class="exp-tab" onclick="switchTab('regulatory',this)">Regulatory Reporting</button>
+    <button class="exp-tab" onclick="switchTab('costcontrol',this)">Cost Controller</button>
+  </div>
 
-    <!-- JAMATH FOODS -->
+  <!-- ══ TAB: PRE-CONTRACT ANALYST ══ -->
+  <div class="exp-timeline tab-panel" id="tab-precontract">
+
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">Jul 2025 – Present</div>
-        <span class="exp-company-logo logo-other">Admin</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">Jul 2025 – Present</div><span class="exp-company-logo logo-other">Admin</span></div>
       <div class="exp-right">
         <h3>Admin (Part-Time)</h3>
         <div class="org">Jamath Foods / Chaiiwala · London, UK</div>
         <ul class="exp-bullets">
-          <li>Coordinated daily administrative and operational activities across 4+ restaurant branches, ensuring smooth workflow, on-time stock delivery and adherence to quality standards.</li>
-          <li>Processed and reconciled 250+ supplier invoices monthly, maintaining 100% data accuracy in Excel and improving payment efficiency by 15%.</li>
-          <li>Analysed weekly sales and cost data to support management decisions, identifying trends that reduced food waste and improved cost control by 10%.</li>
-          <li>Streamlined vendor communication and documentation processes, enhancing operational efficiency and enabling faster cross-team collaboration.</li>
+          <li>Processed and reconciled 250+ supplier invoices monthly maintaining 100% data accuracy in Excel, improving payment efficiency by 15%.</li>
+          <li>Analysed weekly sales and cost data supporting management decisions, reducing food waste and improving cost control by 10%.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Invoice Processing</span><span class="exp-tag">Excel</span>
-          <span class="exp-tag">Operations</span><span class="exp-tag">Data Analysis</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Invoice Processing</span><span class="exp-tag">Excel</span><span class="exp-tag">Cost Analysis</span></div>
       </div>
     </div>
 
-    <!-- NBL INTERNATIONAL -->
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">Jun 2023 – Jun 2025</div>
-        <span class="exp-company-logo logo-nbl">NBL</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">Jun 2023 – Jun 2025</div><span class="exp-company-logo logo-nbl">NBL</span></div>
       <div class="exp-right">
         <h3>Business Reporting Analyst</h3>
         <div class="org">NBL International · London, UK</div>
         <ul class="exp-bullets">
-          <li>Managed consistent information flow across 25+ diverse stakeholders, achieving 90% risk mitigation through structured information management.</li>
-          <li>Championed delivery of interactive dashboards via Excel Macros, directly contributing to a 35% increase in data-driven decision-making across the UK organisation.</li>
-          <li>Directed workshops and presentations, updated 100+ stakeholders via PowerPoint, improving transparency by 40%.</li>
-          <li>Authored 20+ functional and non-functional requirements into business documents and user stories, ensuring clear communication and facilitating project execution.</li>
-          <li>Assessed and optimised KPIs using Macros across a database of 2,500 portals, reducing system errors by 15%.</li>
-          <li>Developed a new data visualisation tool to streamline monthly reporting, resulting in a 30% decrease in report preparation time.</li>
-          <li>Collaborated with cross-functional teams to gather client feedback, implementing service plan enhancements that increased client retention by 10%.</li>
+          <li>Monitored live service framework contracts, developing robust reporting systems covering cost, budget and KPI performance data — enabling senior management to make data-led contract decisions.</li>
+          <li>Built Excel Macro and Tableau dashboards to track live framework usage and performance trends, reducing monthly reporting time by 30% and improving compliance decision-making by 35%.</li>
+          <li>Managed contractual relationships with 25+ stakeholders; identified, resolved and escalated contract issues proactively, ensuring service delivery remained on track.</li>
+          <li>Authored 20+ functional requirements and business process documents supporting pre-contract development activities and procurement planning.</li>
+          <li>Achieved 90% risk mitigation through proactive SLA monitoring and continual improvement of reporting processes.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Excel Macros</span><span class="exp-tag">Stakeholder Mgmt</span>
-          <span class="exp-tag">KPI Analysis</span><span class="exp-tag">SharePoint</span><span class="exp-tag">Business Analysis</span><span class="exp-tag">User Stories</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Framework Contracts</span><span class="exp-tag">Excel Macros</span><span class="exp-tag">Tableau</span><span class="exp-tag">KPI Reporting</span><span class="exp-tag">SLA Management</span></div>
       </div>
     </div>
 
-    <!-- TURNER & TOWNSEND -->
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">Aug 2024</div>
-        <span class="exp-company-logo logo-tt">T&amp;T</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">Aug 2024</div><span class="exp-company-logo logo-tt">T&amp;T</span></div>
       <div class="exp-right">
         <h3>Business Analyst Placement</h3>
         <div class="org">Turner &amp; Townsend · London HQ</div>
         <ul class="exp-bullets">
-          <li>Assisted in managing contract compliance for infrastructure projects exceeding £3.5 billion, gaining hands-on experience in contract administration and compliance monitoring.</li>
-          <li>Reviewed contract documentation for risk assessment and adherence to procurement guidelines at the London HQ.</li>
-          <li>Contributed to completing compliance audits, ensuring all documentation met regulatory and procurement standards.</li>
+          <li>Supported pre-contract and contract compliance activities for infrastructure projects exceeding £3.5 billion, reviewing tender documentation, risk assessments and procurement guidelines.</li>
+          <li>Analysed contract documentation to evaluate commercial risk and contractor compliance with framework terms, contributing to procurement performance improvement at London HQ.</li>
+          <li>Presented data-driven performance insights to project managers and senior stakeholders, enabling informed decisions on live and pre-contract frameworks.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Contract Compliance</span><span class="exp-tag">Risk Assessment</span>
-          <span class="exp-tag">Procurement</span><span class="exp-tag">Infrastructure</span><span class="exp-tag">Audit</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Pre-Contract</span><span class="exp-tag">Tender Review</span><span class="exp-tag">Commercial Risk</span><span class="exp-tag">£3.5B Portfolio</span></div>
       </div>
     </div>
 
-    <!-- RIGHT SUPPORT MANAGEMENT -->
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">Jun 2022 – May 2023</div>
-        <span class="exp-company-logo logo-other">RSM</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">Jun 2022 – May 2023</div><span class="exp-company-logo logo-other">RSM</span></div>
       <div class="exp-right">
         <h3>Administrator Assistant</h3>
-        <div class="org">Right Support Management Limited (CQC-Regulated) · London, UK</div>
+        <div class="org">Right Support Management Ltd (CQC-Regulated) · London, UK</div>
         <ul class="exp-bullets">
-          <li>Processed 400+ monthly invoices and managed confidential financial records for 53 service users within a CQC-regulated care organisation, maintaining strict data confidentiality at all times.</li>
-          <li>Coordinated meetings, took minutes, maintained a bring-forward system for key deadlines and handled all incoming correspondence as the first point of contact for the office.</li>
-          <li>Documented financial transactions by entering rent receivables, payables and account information into journals and Quickfile financial management systems.</li>
-          <li>Maintained robust control of company properties with accurate data on mortgages, leases and purchase records; liaised with authorities regarding housing benefits and service charge claims.</li>
-          <li>Produced weekly receivable reports, assisted in outstanding debt follow-up and reduced outstanding debts by 20%.</li>
-          <li>Reconciled financial discrepancies by collecting and analysing account information, ensuring all journal entries were completed in general ledgers.</li>
-          <li>Maintained accounting controls by preparing and recommending policies and procedures; secured financial information via database backups.</li>
+          <li>Managed contractual and financial records in a CQC-regulated environment; processed 400+ invoices monthly, maintained lease and service contracts, ensured Health &amp; Safety policy adherence and reduced outstanding debts by 20%.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">CQC Regulated</span><span class="exp-tag">Invoice Processing</span>
-          <span class="exp-tag">Confidential Records</span><span class="exp-tag">Quickfile</span><span class="exp-tag">Financial Reporting</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">CQC Regulated</span><span class="exp-tag">Contract Records</span><span class="exp-tag">Health &amp; Safety</span></div>
       </div>
     </div>
 
-    <!-- EXL SERVICE -->
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">May 2021 – Jan 2022</div>
-        <span class="exp-company-logo logo-exl">EXL</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">May 2021 – Jan 2022</div><span class="exp-company-logo logo-exl">EXL</span></div>
       <div class="exp-right">
-        <h3>Business Analyst · Senior Executive</h3>
+        <h3>Senior Executive — Contract &amp; Procurement Management</h3>
         <div class="org">EXL Service · Bengaluru, India</div>
         <ul class="exp-bullets">
-          <li>Led cross-functional teams ensuring on-time project delivery, achieving a 95% project completion rate using SAP, PeopleSoft and Slack.</li>
-          <li>Managed processing of 3,000+ daily invoices and oversaw SAP Ariba, Coupa and Tungsten expenses for consultants; managed payroll for 10,000+ employees with 99.5% accuracy.</li>
-          <li>Contributed to monthly SOX and EY internal audit cycles, ensuring meticulous financial compliance across diverse geographic zones.</li>
-          <li>Maintained regular communication with finance operations teams and clients' Head of Finance, reporting on SLA performance and exceptions lists.</li>
-          <li>Collaborated with clients to identify regulatory and product requirements, providing guidance on process optimisation and data architecture.</li>
-          <li>Exceeded KPI targets by 49% through effective project initiation and management; optimised business processes by 90% through comprehensive support.</li>
-          <li>Led delivery of strategic initiatives and regulatory projects within cross-functional teams, establishing governance frameworks for key processes.</li>
-          <li>Spearheaded identification and capture of precise data requirements for compliant sustainability (ESG) reporting, increasing data accuracy by 30%.</li>
+          <li>Managed end-to-end Source-to-Pay (S2P) procurement operations across APAC and EMEA, ensuring tender documentation compliance and improving S2P compliance rates by 25%.</li>
+          <li>Conducted 50+ contract audits and reconciliations monthly using SAP Ariba, Coupa and Tungsten; evaluated commercial risk and reduced discrepancies by 20%.</li>
+          <li>Produced financial performance reports, cost analysis and KPI data for senior management, supporting business improvement decisions across active service framework contracts.</li>
+          <li>Coordinated with 8+ APAC and EMEA stakeholders to align procurement processes with regulatory requirements; exceeded KPI targets by 49%.</li>
+          <li>Led delivery of strategic regulatory projects within cross-functional teams; managed payroll for 10,000+ employees with 99.5% accuracy across SOX and EY audit cycles.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">PeopleSoft</span>
-          <span class="exp-tag">SOX Audit</span><span class="exp-tag">EY Audit</span><span class="exp-tag">ESG Reporting</span><span class="exp-tag">GL Reconciliation</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Source-to-Pay</span><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">Contract Audits</span><span class="exp-tag">Commercial Risk</span></div>
       </div>
     </div>
 
-    <!-- ORACLE -->
     <div class="exp-item">
-      <div class="exp-left">
-        <div class="exp-date">Mar 2018 – May 2021</div>
-        <span class="exp-company-logo logo-oracle">Oracle</span>
-      </div>
+      <div class="exp-left"><div class="exp-date">Mar 2018 – May 2021</div><span class="exp-company-logo logo-oracle">Oracle</span></div>
       <div class="exp-right">
-        <h3>Project Business Analyst</h3>
+        <h3>Project Accounting Analyst — Contract Management</h3>
         <div class="org">Oracle · Bengaluru, India</div>
         <ul class="exp-bullets">
-          <li>Administered multicurrency EMEA portfolio of 100,000+ contracts in Oracle Cloud EBS/R12, ensuring accurate recording of project submissions, risks, financial crime and credit memos.</li>
-          <li>Played a key PMO role — scheduled and compiled Steering Group packs, managed meeting minutes, maintained version-controlled SharePoint governance sites, and distributed minutes within 24 hours.</li>
-          <li>Maintained a live Excel action log capturing owner, due date, status and dependencies, proactively flagging items approaching deadlines before slippage occurred.</li>
-          <li>Supported the Delivery Lead in project governance and administration; applied project tools and templates addressing feedback from the Oracle Portfolio Workstream.</li>
-          <li>Implemented project-level KPIs using Excel Macros, enhancing performance tracking by 25% and ensuring accurate evaluations across the EMEA region.</li>
-          <li>Prepared and updated Requirement Delivery Plans, monitored progress and communicated updates to managers and the department director, achieving a 95% on-time delivery rate.</li>
-          <li>Defined and implemented data governance practices compliant with PALA requirements, resulting in a 50% reduction in compliance audit issues.</li>
-          <li>Managed the technical development of annual ESG reporting, ensuring alignment with frameworks and enhancing report accuracy by 30%.</li>
-          <li>Delivered training to delivery leads and business stakeholders on project templates and approaches; guided Finance teams on lessons learned and best practices.</li>
-          <li>Generated invoices and revenues for Time &amp; Materials and Fixed Price projects; coordinated with AR, AP, General Ledger and Cash Applications teams to resolve issues in real time.</li>
-          <li>Won Year of Achievement Recognition (YAR) award 5 consecutive times for outstanding contribution to project and contract management excellence.</li>
+          <li>Administered multicurrency EMEA portfolio of 100,000+ live framework contracts in Oracle Cloud EBS/R12 and SAP — comparable in scale to SPEN's £900M service frameworks portfolio — monitoring live framework usage, Source-to-Pay compliance and continual improvement of contract delivery.</li>
+          <li>Led pre-contract development activities: evaluated framework agreements, assessed risk allocation between Oracle and contractors, reviewed tender documentation and maintained procurement compliance records.</li>
+          <li>Developed robust reporting systems covering cost analysis, budget forecasting, financial performance data and KPI reports; presented findings to senior EMEA management at Steering Group meetings.</li>
+          <li>Drove business improvement through live framework usage analysis: identified issues, proposed solutions and escalated to operational staff, project managers and senior management.</li>
+          <li>Maintained live action logs; compiled Steering Group packs, distributed governance minutes within 24 hours and managed version-controlled SharePoint governance site.</li>
+          <li>Defined data governance practices aligned to PALA requirements, reducing compliance audit issues by 50%; improved contract reporting accuracy by 30%.</li>
+          <li>Won Year of Achievement Recognition (YAR) 5 consecutive times and R&amp;R Award twice for outstanding pre-contract and framework management performance.</li>
         </ul>
-        <div class="exp-tags">
-          <span class="exp-tag">Oracle Cloud EBS/R12</span><span class="exp-tag">PMO Support</span>
-          <span class="exp-tag">EMEA Portfolio</span><span class="exp-tag">Steering Group</span>
-          <span class="exp-tag">ESG Reporting</span><span class="exp-tag">Project Governance</span><span class="exp-tag">PALA Compliance</span>
-        </div>
+        <div class="exp-tags"><span class="exp-tag">Oracle Cloud EBS/R12</span><span class="exp-tag">Framework Agreements</span><span class="exp-tag">Risk Allocation</span><span class="exp-tag">Tender Documentation</span><span class="exp-tag">PALA Compliance</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ TAB: REGULATORY REPORTING ══ -->
+  <div class="exp-timeline tab-panel" id="tab-regulatory" style="display:none;">
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jul 2025 – Present</div><span class="exp-company-logo logo-other">Admin</span></div>
+      <div class="exp-right">
+        <h3>Admin (Part-Time)</h3>
+        <div class="org">Jamath Foods / Chaiiwala · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Processed and reconciled 250+ supplier invoices monthly maintaining 100% data accuracy in Excel, improving payment efficiency by 15%.</li>
+          <li>Analysed weekly sales and cost data supporting management decisions, reducing food waste and improving cost control by 10%.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Invoice Processing</span><span class="exp-tag">Excel</span><span class="exp-tag">Data Accuracy</span></div>
       </div>
     </div>
 
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jun 2023 – Jun 2025</div><span class="exp-company-logo logo-nbl">NBL</span></div>
+      <div class="exp-right">
+        <h3>Business Reporting Analyst</h3>
+        <div class="org">NBL International · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Developed and maintained robust data capture and reporting processes for 25+ stakeholders, improving data accuracy by 35% and cutting reporting preparation time by 30%.</li>
+          <li>Produced KPI performance reports and quality-assured data for senior management, ensuring accurate and complete information aligned to organisational compliance obligations.</li>
+          <li>Managed workload across multiple concurrent analytical streams; communicated complex data findings clearly in presentations to senior management and non-technical stakeholders.</li>
+          <li>Collaborated cross-functionally to gather requirements and implement process improvements, increasing client retention by 10% and reducing system errors by 15%.</li>
+          <li>Authored 20+ functional and non-functional requirements documents, ensuring data governance standards and reporting obligations were met.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Regulatory Reporting</span><span class="exp-tag">Data Governance</span><span class="exp-tag">KPI Reports</span><span class="exp-tag">Compliance</span><span class="exp-tag">Excel Macros</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Aug 2024</div><span class="exp-company-logo logo-tt">T&amp;T</span></div>
+      <div class="exp-right">
+        <h3>Business Analyst Placement</h3>
+        <div class="org">Turner &amp; Townsend · London HQ</div>
+        <ul class="exp-bullets">
+          <li>Supported contract compliance and regulatory reporting for infrastructure projects exceeding £3.5 billion, reviewing documentation against procurement and compliance guidelines.</li>
+          <li>Contributed to compliance audits ensuring all contract and financial data met regulatory standards; prepared data summaries for senior management review.</li>
+          <li>Provided analytical support and data-driven insights to project teams, enabling timely and accurate reporting on active contracts.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Regulatory Compliance</span><span class="exp-tag">Compliance Audit</span><span class="exp-tag">Data Reporting</span><span class="exp-tag">£3.5B Infrastructure</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jun 2022 – May 2023</div><span class="exp-company-logo logo-other">RSM</span></div>
+      <div class="exp-right">
+        <h3>Administrator Assistant</h3>
+        <div class="org">Right Support Management Ltd (CQC-Regulated) · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Managed financial and contractual records for 53 service users in a regulated compliance-driven environment; maintained strict data governance, processed 400+ monthly invoices and produced weekly performance reports.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">CQC Regulated</span><span class="exp-tag">Data Governance</span><span class="exp-tag">Performance Reports</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">May 2021 – Jan 2022</div><span class="exp-company-logo logo-exl">EXL</span></div>
+      <div class="exp-right">
+        <h3>Senior Executive — Regulatory Reporting &amp; Analytics</h3>
+        <div class="org">EXL Service · Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Maintained regular communication with clients' Head of Finance and operations teams, reporting on SLA performance, exceptions and regulatory compliance across APAC and EMEA.</li>
+          <li>Contributed to SOX and EY audit cycles ensuring meticulous financial compliance across diverse geographic zones; maintained 99.5% payroll accuracy for 10,000+ employees.</li>
+          <li>Produced ad-hoc business analysis and maintained reporting integrity, presenting data-driven findings to senior stakeholders across multiple regulatory frameworks.</li>
+          <li>Led cross-functional teams to deliver strategic regulatory projects; exceeded KPI targets by 49% through effective project initiation and governance.</li>
+          <li>Collaborated with clients to identify regulatory and product requirements, providing guidance on process optimisation and data architecture.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">SOX Audit</span><span class="exp-tag">EY Audit</span><span class="exp-tag">Regulatory Frameworks</span><span class="exp-tag">Data Architecture</span><span class="exp-tag">SLA Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Mar 2018 – May 2021</div><span class="exp-company-logo logo-oracle">Oracle</span></div>
+      <div class="exp-right">
+        <h3>Project Accounting Analyst — Regulatory &amp; Management Reporting</h3>
+        <div class="org">Oracle · Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Administered multicurrency EMEA portfolio of 100,000+ contracts in Oracle Cloud EBS/R12 — developing and maintaining management information systems, reporting frameworks and KPI dashboards for senior EMEA stakeholders.</li>
+          <li>Defined and implemented data governance practices aligned to PALA regulatory requirements, reducing compliance audit issues by 50% and improving reporting accuracy by 30%.</li>
+          <li>Scheduled and compiled Steering Group packs, managed governance minutes and maintained SharePoint documentation sites; presented complex regulatory performance data clearly at all organisational levels.</li>
+          <li>Led annual ESG and sustainability reporting aligned to regulatory frameworks, improving data accuracy by 30% and ensuring stakeholder and regulatory compliance.</li>
+          <li>Prepared Pivot Table analyses for Financial Year reviews; developed structured reporting frameworks used by senior stakeholders across EMEA.</li>
+          <li>Provided data governance guidance and delivered training to business stakeholders on reporting templates and compliance approaches.</li>
+          <li>Won Year of Achievement Recognition (YAR) 5 consecutive times for outstanding regulatory reporting and contract management contribution.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Oracle EBS/R12</span><span class="exp-tag">Management Information Systems</span><span class="exp-tag">ESG Reporting</span><span class="exp-tag">PALA Governance</span><span class="exp-tag">Regulatory Compliance</span></div>
+      </div>
+    </div>
   </div>
+
+  <!-- ══ TAB: COST CONTROLLER ══ -->
+  <div class="exp-timeline tab-panel" id="tab-costcontrol" style="display:none;">
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jul 2025 – Present</div><span class="exp-company-logo logo-other">Admin</span></div>
+      <div class="exp-right">
+        <h3>Admin (Part-Time)</h3>
+        <div class="org">Jamath Foods / Chaiiwala · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Processed and reconciled 250+ supplier invoices monthly maintaining 100% data accuracy in Excel, improving payment efficiency by 15%.</li>
+          <li>Analysed weekly sales and cost data supporting management decisions, reducing food waste and improving cost control by 10%.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Invoice Processing</span><span class="exp-tag">Cost Control</span><span class="exp-tag">Excel</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jun 2023 – Jun 2025</div><span class="exp-company-logo logo-nbl">NBL</span></div>
+      <div class="exp-right">
+        <h3>Business Reporting Analyst</h3>
+        <div class="org">NBL International · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Maintained financial records and produced cost, budget and performance data reports for 25+ stakeholders, improving data-driven decision-making by 35%.</li>
+          <li>Built Excel Macro dashboards tracking financial KPIs across a portfolio of 2,500 records, reducing reporting time by 30% and identifying cost trends proactively.</li>
+          <li>Processed and reconciled 250+ supplier invoices monthly, monitored open purchase orders and ensured accurate month-end reporting.</li>
+          <li>Managed competing priorities and deadlines across multiple workstreams; communicated financial performance findings clearly at all organisational levels.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Cost Reporting</span><span class="exp-tag">Excel Macros</span><span class="exp-tag">KPI Dashboards</span><span class="exp-tag">Purchase Orders</span><span class="exp-tag">Month-End</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Aug 2024</div><span class="exp-company-logo logo-tt">T&amp;T</span></div>
+      <div class="exp-right">
+        <h3>Business Analyst Placement</h3>
+        <div class="org">Turner &amp; Townsend · London HQ</div>
+        <ul class="exp-bullets">
+          <li>Supported cost administration and compliance monitoring for infrastructure projects exceeding £3.5 billion, reviewing contract documentation and financial records.</li>
+          <li>Reviewed contract documentation for risk assessment and cost compliance, gaining hands-on experience in cost control processes for large infrastructure programmes.</li>
+          <li>Provided cost data and analytical insights to project managers enabling informed financial decision-making on active projects.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Cost Administration</span><span class="exp-tag">Cost Compliance</span><span class="exp-tag">Financial Records</span><span class="exp-tag">£3.5B Infrastructure</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Jun 2022 – May 2023</div><span class="exp-company-logo logo-other">RSM</span></div>
+      <div class="exp-right">
+        <h3>Administrator Assistant</h3>
+        <div class="org">Right Support Management Ltd (CQC-Regulated) · London, UK</div>
+        <ul class="exp-bullets">
+          <li>Processed 400+ monthly invoices, maintained property lease contracts, reconciled financial discrepancies and reduced outstanding debts by 20%; ensured all financial control procedures and Health &amp; Safety policies were followed.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Invoice Processing</span><span class="exp-tag">Financial Control</span><span class="exp-tag">Health &amp; Safety</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">May 2021 – Jan 2022</div><span class="exp-company-logo logo-exl">EXL</span></div>
+      <div class="exp-right">
+        <h3>Senior Executive — Financial Cost Management</h3>
+        <div class="org">EXL Service · Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Oversaw SAP Ariba, Coupa and Tungsten expenses for 10,000+ employees; processed 3,000+ daily invoices and managed PO lifecycle including blocking/unblocking and reconciliation.</li>
+          <li>Conducted 50+ monthly contract and financial audits, reducing discrepancies by 20% and improving cost control accuracy across APAC and EMEA regions.</li>
+          <li>Produced financial performance data, variance reports and KPI summaries for senior management; contributed to month-end value-of-work-done verification.</li>
+          <li>Exceeded KPI targets by 49%; achieved 99.5% payroll accuracy for 10,000+ employees within strict deadlines — demonstrating strong cost discipline in a high-volume environment.</li>
+          <li>Contributed to SOX and EY internal audit cycles ensuring meticulous financial compliance across diverse geographic zones.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">SAP Ariba</span><span class="exp-tag">Coupa</span><span class="exp-tag">PO Management</span><span class="exp-tag">Value of Work Done</span><span class="exp-tag">SOX Audit</span></div>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-left"><div class="exp-date">Mar 2018 – May 2021</div><span class="exp-company-logo logo-oracle">Oracle</span></div>
+      <div class="exp-right">
+        <h3>Project Accounting Analyst — Cost Controller</h3>
+        <div class="org">Oracle · Bengaluru, India</div>
+        <ul class="exp-bullets">
+          <li>Administered multicurrency EMEA portfolio of 100,000+ contracts in Oracle Cloud EBS/R12 — monitoring open POs, managing invoice lifecycle, supporting budget maintenance and producing financial forecasts and cost performance data for senior EMEA stakeholders.</li>
+          <li>Coordinated month-end activities including Value of Work Done verification, Fixed Project Loss Accrual reports and revenue recognition based on Percentage of Completion for Fixed Price projects.</li>
+          <li>Produced Pivot Table analyses for Financial Year reviews and financial performance reporting; developed cost reporting frameworks used by senior EMEA stakeholders.</li>
+          <li>Maintained SAP availability and supported creation and maintenance of project budgets, annual PO roll-overs and extraordinary payment requests for 100,000+ contracts.</li>
+          <li>Coordinated with AR, AP, General Ledger and Cash Applications teams to resolve cost, invoicing and contract issues across T&amp;M and Fixed Price projects.</li>
+          <li>Implemented KPI tracking using Excel Macros, reducing compliance audit issues by 50% and improving cost reporting accuracy by 30%.</li>
+          <li>Won Year of Achievement Recognition (YAR) 5 consecutive times for outstanding cost management and financial control performance.</li>
+        </ul>
+        <div class="exp-tags"><span class="exp-tag">Oracle EBS/R12</span><span class="exp-tag">Cost Control</span><span class="exp-tag">Value of Work Done</span><span class="exp-tag">PO Roll-overs</span><span class="exp-tag">Fixed Price Projects</span><span class="exp-tag">Budget Management</span></div>
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -659,68 +808,73 @@
 <div style="max-width: 1100px; margin: 0 auto;">
   <div class="section-label">Portfolio</div>
   <h2>Key Projects &amp; Achievements</h2>
-  <p class="section-sub">Selected projects demonstrating measurable impact across technology, finance and healthcare.</p>
+  <p class="section-sub">Selected projects demonstrating measurable impact across contract management, regulatory reporting and cost control.</p>
 
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-card-num">01</div>
-      <h3>EMEA Contract Portfolio Governance</h3>
+      <h3>EMEA Framework Contract Portfolio — Oracle</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>End-to-end PMO support for 100,000+ Oracle EMEA contracts across multicurrency projects.</li>
-        <li>Maintained live action logs, compiled Steering Group packs and managed version-controlled SharePoint governance site.</li>
-        <li>Coordinated across Finance, AR, AP and Cash Applications teams to resolve issues in real time.</li>
+        <li>Administered 100,000+ live multicurrency EMEA contracts in SAP EBS/Oracle Cloud EBS/R12 — monitoring live framework usage, evaluating framework agreements and allocating commercial risk.</li>
+        <li>Developed robust reporting systems covering cost analysis, budget forecasting and KPI performance data; compiled Steering Group packs and presented findings to senior EMEA management.</li>
+        <li>Reduced compliance audit issues by 50% through PALA-aligned data governance practices.</li>
       </ul>
-      <div class="project-impact">📉 50% reduction in compliance audit issues</div>
+      <div class="project-impact">📉 50% reduction in compliance issues · 30% better reporting accuracy</div>
     </div>
+
     <div class="project-card">
       <div class="project-card-num">02</div>
-      <h3>Excel Macro Dashboard Suite — NBL</h3>
+      <h3>Regulatory Reporting &amp; Data Governance Programme</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>Designed and built Excel Macro dashboards serving 2,500 student portals at NBL International.</li>
-        <li>Automated KPI tracking and monthly reporting with real-time error flagging for 25+ stakeholders.</li>
-        <li>Reviewed dashboards every morning; sent weekly risk summary to Director before issues escalated.</li>
+        <li>Built and maintained management information systems and regulatory reporting frameworks for 100,000+ EMEA contracts aligned to PALA governance requirements.</li>
+        <li>Led annual ESG and sustainability reporting programmes ensuring alignment with regulatory frameworks and stakeholder expectations.</li>
+        <li>Delivered training to business stakeholders on reporting templates and compliance approaches across the EMEA region.</li>
       </ul>
-      <div class="project-impact">⏱ 30% reduction in monthly reporting time</div>
+      <div class="project-impact">📊 30% improvement in data accuracy · 50% fewer audit issues</div>
     </div>
+
     <div class="project-card">
       <div class="project-card-num">03</div>
-      <h3>ESG &amp; Sustainability Data Programme</h3>
+      <h3>Month-End Cost Control &amp; SAP Financial Lifecycle</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>Led data governance for sustainability reporting at EXL &amp; Oracle, aligned to the PALA framework.</li>
-        <li>Worked with ESG teams to produce compliant reporting meeting stakeholder and regulatory expectations.</li>
-        <li>Led continuous improvement initiatives to reduce data discrepancies by 20%.</li>
+        <li>Coordinated month-end Value of Work Done verification, Fixed Project Loss Accrual reports and revenue recognition for Fixed Price and T&amp;M projects across the EMEA portfolio.</li>
+        <li>Managed annual PO roll-overs, invoice blocking/unblocking and extraordinary payment requests for 100,000+ contracts in SAP.</li>
+        <li>Produced Pivot Table financial year reviews and cost reporting frameworks for senior stakeholders.</li>
       </ul>
-      <div class="project-impact">📈 30% improvement in data accuracy · 25% compliance improvement</div>
+      <div class="project-impact">💰 99.5% financial accuracy · 3,000+ daily invoices processed</div>
     </div>
+
     <div class="project-card">
       <div class="project-card-num">04</div>
-      <h3>CQC-Regulated Care Administration</h3>
+      <h3>Source-to-Pay Compliance Improvement — EXL Service</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>Managed confidential records for 53 vulnerable service users at Right Support Management (CQC-regulated).</li>
-        <li>Processed 400+ invoices monthly; maintained bring-forward deadline system and all governance documentation.</li>
-        <li>Ensured full compliance with care sector regulatory frameworks and data protection requirements.</li>
+        <li>Conducted 50+ monthly contract audits using SAP Ariba, Coupa and Tungsten; reduced discrepancies by 20% and improved S2P compliance rates by 25% across APAC and EMEA.</li>
+        <li>Produced variance reports, financial performance data and KPI summaries for senior management across diverse geographic zones.</li>
+        <li>Contributed to SOX and EY audit cycles with 99.5% payroll accuracy for 10,000+ employees.</li>
       </ul>
-      <div class="project-impact">🏥 20% reduction in outstanding debts · 100% CQC compliance</div>
+      <div class="project-impact">✅ 25% S2P compliance improvement · 20% fewer discrepancies</div>
     </div>
+
     <div class="project-card">
       <div class="project-card-num">05</div>
-      <h3>Cardtrend Digital Solution (MSc Project)</h3>
+      <h3>Excel Macro KPI Dashboard Suite — NBL International</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>Scoped a digital solution for Cardtrend, a regulated B2B payments company, as part of MSc Collaborative Project.</li>
-        <li>Facilitated client discovery sessions, designed requirements and managed team delivery remotely during campus disruption.</li>
-        <li>Maintained stakeholder momentum and ensured all deliverables were met under pressure.</li>
+        <li>Designed and built Excel Macro and Tableau dashboards tracking live framework KPIs, cost trends and financial performance data for 25+ stakeholders.</li>
+        <li>Reduced monthly reporting preparation time by 30% and improved compliance decision-making by 35%.</li>
+        <li>Identified contract and cost issues proactively, enabling data-led management decisions before problems escalated.</li>
       </ul>
-      <div class="project-impact">🏆 Highlighted as exceptionally client-focused by assessors</div>
+      <div class="project-impact">⏱ 30% less reporting time · 35% better decision-making</div>
     </div>
+
     <div class="project-card">
       <div class="project-card-num">06</div>
-      <h3>MSc Business Analytics — Aston University</h3>
+      <h3>MSc Business Analytics — Aston University (2026)</h3>
       <ul class="exp-bullets" style="margin-bottom:1rem;">
-        <li>Building machine learning models in Python; conducting statistical analyses using regression and hypothesis testing.</li>
-        <li>Developing decision models using linear and integer programming; building Power BI and Power Automate dashboards.</li>
-        <li>Applying academic learning directly to real-world BA and PMO project scenarios.</li>
+        <li>Building Power BI dashboards and Power Automate workflows applicable to regulatory reporting systems and ED2 investment programme reporting.</li>
+        <li>Developing machine learning models in Python, statistical analyses using regression and decision models using linear programming.</li>
+        <li>Directly applicable to SPEN Pre-Contract Analyst, Regulatory Reporting and Cost Controller roles.</li>
       </ul>
-      <div class="project-impact">🎓 Graduating 2026 · Merit Classification</div>
+      <div class="project-impact">🎓 Graduating 2026 · Merit Classification · Power BI · Python · ML</div>
     </div>
   </div>
 </div>
@@ -871,5 +1025,13 @@
   © 2026 Nivedha Subramaniam · London, UK · Skilled Worker Sponsorship Required
 </footer>
 
+<script>
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + name).style.display = 'block';
+  btn.classList.add('active');
+}
+</script>
 </body>
 </html>
